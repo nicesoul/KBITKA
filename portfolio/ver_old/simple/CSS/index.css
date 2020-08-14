@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap");
+
+:root{
+  --cardCOLOR: #ffffca;
+  --cardCOLOR: #ffff9a;
+  --cardCOLOR: white;
+
+  /* --accentCOLOR: #ff09ad;  */
+  --accentCOLOR: #058139;
+  --accentCOLOR: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", Arial, sans-serif;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+  padding: 5px;
+}
+
+.table {
+margin: 15vh 20px;
+/* opacity: 0; */
+/* transition: ease-in-out 2s; */
+/* transform: rotate(30deg);
+transition: ease-in-out 3s;
+transform: rotate(-30deg);
+transition: ease-in-out 2s; */
+}
+
+
+.card {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  min-width: 100px;
+  max-width: 400px;
+  /* word-wrap: break-word; */
+  /* border: 2px solid var(--accentCOLOR); */
+  border-radius: 15px;
+  background-color: var(--cardCOLOR);
+  /* background: repeating-linear-gradient(rgb(218, 255, 218), rgb(245, 245, 186)); */
+  transition: 0.2s;
+}
+.card:hover, .card:focus, a:hover .card, .card:focus-within{
+  box-shadow: 
+  0px 0px 0px 1px var(--cardCOLOR),
+  0px 0px 10px 0px var(--accentCOLOR);
+  transform: scale(1.1);
+  outline:none;
+}
+p {
+  font-size: 20px;
+}
+/* hr {
+    height: 1px;
+    background-color: gold;
+    border: none;
+  } */
+  a { font-size: large;
+      margin: 6px;
+      text-decoration: none;
+      color: rgb(211, 0, 211);
+  }
+  a:focus, a:hover{
+    box-shadow: 
+    0px 0px 0px 2px var(--cardCOLOR),
+    0px 0px 5px 2px var(--accentCOLOR);
+    
+    /* box-shadow: 0px 0px 0px 2px white; */
+    /* transform: scale(1.1); */
+    outline: none;
+
+  }
+  @keyframes example {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    /* from {background: radial-gradient(circle at center, var(--cardCOLOR), var(--accentCOLOR),var(--cardCOLOR));}
+    to {background: radial-gradient(circle at center, var(--accentCOLOR), var(--cardCOLOR), var(--accentCOLOR));}} */}
+
+  body{
+  background-color: white;
+  /* animation: example linear 5s infinite; */
+  background: linear-gradient(-45deg, #ee9175, #e46d9b, #66bbda, #7cddc6);
+	background-size: 300% 300%;
+	animation: example 20s ease infinite;
+  
+  
+  
+  }
+  /*background: conic-gradient(rgb(248, 155, 155), rgb(255, 255, 166), rgb(166, 255, 166), rgb(163, 255, 255), rgb(151, 151, 255), rgb(255, 165, 255), rgb(248, 155, 155));
+  background: conic-gradient(
+      #ddffdd,#beffb6, 
+  #83fce2, #a3ffff,#b6e4ff, #b6e4ff, #a3ffff,#83fce2
+  #beffb6,#ddffdd 
+  );
+  transition: 5s;
+  }
+  */
+
+  
