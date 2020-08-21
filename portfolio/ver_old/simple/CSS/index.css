@@ -93,13 +93,9 @@ p {
   body{
   background-color: white;
   /* animation: example linear 5s infinite; */
-  background: linear-gradient(-45deg, #ee9175, #e46d9b, #66bbda, #7cddc6);
+  background: linear-gradient(-45deg, #ffc5b3, #fdc3da, #b0eaff, #befded);
 	background-size: 300% 300%;
-	animation: example 20s ease infinite;
-  
-  
-  
-  }
+	animation: example 20s ease infinite;  }
   /*background: conic-gradient(rgb(248, 155, 155), rgb(255, 255, 166), rgb(166, 255, 166), rgb(163, 255, 255), rgb(151, 151, 255), rgb(255, 165, 255), rgb(248, 155, 155));
   background: conic-gradient(
       #ddffdd,#beffb6, 
@@ -109,5 +105,14 @@ p {
   transition: 5s;
   }
   */
+  iframe {
+    background: white;
+    /* width: fit-content; */
+    min-width: 20%;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
 
   
