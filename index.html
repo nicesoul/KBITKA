@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nicesoul</title>
+    <title>Nicesoul</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p style="margin-top: 50px; text-align: center; font-size: 22px; font-family: Consolas, 'Courier New', monospace;">The seed will grow into a tree :) <br><br> Be yourself ;)</p>
+<div class="scroll-container"> <!-- to enable smooth scrolling -->
+    <nav class="top-navbar">
+    <ul>
+        <li><a href="#about">   About   </a></li>
+        <li><a href="#works">   Works   </a></li>
+        <li><a href="#links">   Links   </a></li>
+        <li><a href="#ideas">   Ideas   </a></li>
+    </ul></nav>
+
+    <section id="about" tabindex="0"> <div class="one-container">   <h3>enjoy! <br><br> <img id="vadym_photo" src="./portfolio/ver_1/img/Вадим_sm_200.JPG" alt="personal photo"></h3>       <p class="section__p">I'm a fresh web developer. I love pure CSS and fine-tuning sites :) <br>Currently I'm looking for a job. Check my projects below. <br>Beware the dragon :) </p>          </div>  </section>
+    <section id="works" tabindex="0"> <h3>works</h3>
+        
+    <div class="example-container">
+        <div class="example example-1">
+            <img src="./portfolio/ver_1/img/weather_app.jpg" alt="weather app image">
+            <p>Weather site</p>
+            <span><a href="https://nicesoul.github.io/learning">Weather</a></span>
+        </div>
+        <div class="example example-2">
+            <img src="./portfolio/ver_1/img/shopping_app.jpg" alt="shopping app image">
+            <p>The draft of a shopping site. <!-- Built using Node, Express, MongoDB --></p>
+            <span><a href="https://nicesoul.github.io/Sani-shoes">Shop</a></span> 
+        </div>
+        <div class="example example-3">
+            <img src="./portfolio/ver_1/img/logo.svg" alt="portfolio database image">
+            <p>Portfolio DB project</p>
+            <span><a href="https://github.com/AndrPaul/PortfolioDB">PaulDB</a></span>  
+        </div>
+    </div>
+    </section>
+
+    <section id="links" tabindex="0"> <div class="one-container">   <h3>links</h3>      
+        <p class="section__p"><a href="https://github.com/nicesoul">GitHub</a> <a href="https://linkedin.com/in/vadym-sanzhara/">LinkedIn</a> <a href="./portfolio/ver_1/img/CV_NED_Vadym_Sanzhara_08.2020.pdf">CV (Dutch version)</a></p> 
+    </div>  </section>
+    <section id="ideas" tabindex="0"> <div class="one-container">    <h3>ideas</h3>      <p class="section__p">The seed will grow into a tree :)<br><br> Be yourself ;)</p>      </div>      </section>
+    <p class="copyright" tabindex="0">Life is always alive<br><br> Enjoy</p>
+</div>
 </body>
 </html>
