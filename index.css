@@ -1,21 +1,20 @@
 /*! some generic rules first
 Please, use SlashStarExlamationSign </*!> to preserve comments while formatting by CSS Compressor */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Consolas,Roboto,monospace}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Quicksand,sans-serif}
 :focus{border:none;outline:0}
 ::selection{background-color:#f08080}
 ul{list-style:none}
-a{display:inline-block;text-decoration:none;padding:calc(.4vw + 4px) calc(.5vw + 10px);margin-bottom:10px;border-radius:2px;background-color:#000;color:#ff0}
+a{display:inline-block;text-decoration:none;padding:calc(.4vw + 4px) calc(.5vw + 10px);padding-top:clamp(.2rem,calc(.4vw + 4px),2rem);padding-bottom:clamp(.2rem,calc(.4vw + 4px),2rem);margin-bottom:10px;border-radius:2px;background-color:hsla(61,100%,81%,.4);color:#000}
 html{font-size:20px;line-height:1.2}
 body{overflow:hidden;/*! leave this commented as a fallback in case? IDK */height:100vh}
 h3{margin:30px;text-align:center;font-size:calc(.5vw + 22px);/*! fallback for a <clamp> function */font-size:clamp(1rem,calc(.5vw + 22px),2rem)}
 /*! .section__p, /* Do you like BEM convention? */
 section p{margin:10px 0;text-align:center;font-size:calc(.5vw + 14px);/*! fallback for a <clamp> function */font-size:clamp(.8rem,calc(.5vw + 14px),1.4rem)}
-.top-navbar{position:fixed;z-index:1;top:0;width:100%;background-color:rgb(253,255,159,.3)}
+.top-navbar{position:fixed;z-index:1;top:0;width:100%;background-color:hsla(61,100%,81%,.3)}
 nav ul{padding:9px;display:flex;justify-content:space-around}
-a:focus,a:hover{transform:scale(1.25);transition:.3s ease/*! overflow:hidden */}
-nav li a{padding-top:clamp(.2rem,calc(.4vw + 4px),2rem);padding-bottom:clamp(.2rem,calc(.4vw + 4px),2rem);background-color:#000;color:#ff0;clip-path:polygon(20% 0,100% 0,80% 100%,0 100%)}
-section{/*! background: url(https://source.unsplash.com/GGybzke97mw/4256x2832);background-size: 100vw;background-blend-mode: overlay;background-color: rgb(250, 248, 248); */
-    display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;text-align:center;width:100%;height:100%;scroll-snap-align:center/*! tells where to stop after scrolling*/}
+a:focus,a:hover{transform:scale(1.25);transition:.3s ease;background-color:hsla(61,100%,81%,.8)/*! overflow:hidden */}
+nav li a{margin-bottom:0}
+section{/*! background: url(https://source.unsplash.com/GGybzke97mw/4256x2832);background-size: 100vw;background-blend-mode: overlay;background-color: rgb(250, 248, 248); */display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;text-align:center;width:100%;height:100%;scroll-snap-align:center/*! tells where to stop after scrolling*/}
 .scroll-container{width:100%;height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;/*! forces to jump at the position after scrolling */scroll-behavior:smooth/*! yaaaah, man :) */}
 .example-container{display:grid;grid-template-columns:repeat(3,1fr)}
 .example{display:grid;grid-template-rows:30vh 1fr auto;justify-items:center;align-items:center}
@@ -31,6 +30,9 @@ section{/*! background: url(https://source.unsplash.com/GGybzke97mw/4256x2832);b
 @media only screen and (max-width:500px){
 .example{scroll-snap-align:start}
 .example-container{display:grid;grid-template-columns:repeat(3,100vw);width:100%;overflow-x:scroll;scroll-snap-type:x mandatory}
+}
+@media only screen and (max-height:500px){
+    #vadym_photo{display: none;}
 }
 .copyright{text-align:center;color:green}
 body{background-color:#fff;background:linear-gradient(-45deg,#ffc5b3,#fdc3da,#b0eaff,#befded);background-size:300% 300%;animation:example 12s ease-in-out infinite}
