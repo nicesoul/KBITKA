@@ -1,0 +1,47 @@
+/*! some Global and Generic rules first
+Please, use SlashStarExlamationSign </*!> to preserve comments while formatting by CSS Compressor */
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:20px;line-height:1.2}
+/*! Make everything easier to read (bigger)  */
+:focus{border:none;outline:0}
+/*! Get rid of standart browsers style on focus */
+ul{list-style:none}
+/*! Get rid of dots makrings  */
+a{display:inline-block;text-decoration:none}
+/*! Get rid of link underscore + add styling capability  */
+/*! END of Global rules  */
+/*! COLORS and style switching  */
+:root{--maincolor:hsl(200, 80%, 95%);--maincolor-active:hsl(200, 90%, 90%);--secondarycolor:hsl(0, 0%, 96%);--secondarycolor-active:hsl(0, 0%, 90%);--bg-color:hsl(0, 0%, 100%);--linkcolor:hsl(178, 49%, 90%);--linkcolor-active:hsl(178, 60%, 80%);--iconcolor:hsl(178,90%,35%);--iconcolor-active:hsl(178,90%,25%);/*! Define colors for a document  */font-family:Quicksand,sans-serif}
+/*! Define fonts  */
+::selection{background-color:#ef7575}
+/*! Make a nice custom selection color  */
+/*! END of colors and style  */
+/*! Generic rules  */
+body{background-color:var(--bg-color);margin:0 15vw}
+a{padding:calc(.4vw + 4px) calc(.5vw + 10px);padding-top:clamp(.2rem,calc(.4vw + 4px),2rem);padding-bottom:clamp(.2rem,calc(.4vw + 4px),2rem);border-radius:2px;/*! background-color:var(--linkcolor);color:#000 *//*! ver 1 :( */background-color:var(--secondarycolor);color:var(--iconcolor-active)/*! ver 2 :| */}
+h3{font-size:calc(.5vw + 22px);/*! fallback for a <clamp> function */font-size:clamp(1rem,calc(.5vw + 22px),2rem)}
+p{font-size:calc(.5vw + 14px);/*! fallback for a <clamp> function */font-size:clamp(.8rem,calc(.5vw + 14px),1.4rem)}
+nav{position:sticky;z-index:5}
+/*! navbars are always visible */
+nav ul{display:flex;justify-content:space-evenly}
+nav li svg{max-height:4vh}
+a:focus,a:hover{/*! transform:scale(1.1);transition:.3s ease-in; *//*! box-shadow: 0px 2px 4px 2px var(--linkcolor); *//*!
+    background-color:var(--linkcolor-active)/*! ver 1 */color:#000;background-color:var(--linkcolor)}
+/*! END of generic rules */
+.top_navbar{top:0;background:var(--iconcolor)}
+.top_navbar a{background:var(--linkcolor-active);color:var(--iconcolor-active)}
+.top_navbar a:active,.top_navbar a:focus,.top_navbar a:hover{background:var(--linkcolor-active);color:#000}
+.side_navbar{position:fixed;top:1vh;left:3vw;width:9vw;height:30vmin;background:var(--bg-color)}
+.side_navbar ul{height:100%;flex-direction:column;align-items:stretch;text-align:center}
+.side_navbar a{width:100%}
+.greeting{display:flex;align-items:center;justify-content:space-between;background:var(--secondarycolor);min-height:50%}
+.greeting p{margin:10px 2vw 0 4vw;text-align:start}
+/*! .greeting>*+*{margin-left:2vw} */
+.about{display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;max-width:60%}
+.all_together{display:flex;justify-content:space-between;min-height:40vh}
+.all_together img{max-width:25vw;max-height:25vh}
+.example{max-width:30vw;display:flex;flex-direction:column;justify-content:space-between;align-items:center}
+.example__infobox__description{visibility:hidden;position:absolute;top:0;left:0;height:100%;text-align:center;display:flex;align-items:center}
+.example__infobox:hover .example__infobox__description{visibility:visible;opacity:.9;background:#fff}
+.example__infobox{position:relative}
+.color-2{background:var(--secondarycolor)}
