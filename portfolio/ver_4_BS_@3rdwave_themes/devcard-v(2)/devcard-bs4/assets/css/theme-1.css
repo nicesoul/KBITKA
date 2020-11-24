@@ -17,10 +17,11 @@ a:focus {
     box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary);
     outline: none;
 }
-header a:focus {
+header a:focus, header .profile-section a:hover {
     box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
     text-decoration: none
 }
+ p > a {font-weight: 600;}
 
 /*! END of my rules  */
 
@@ -10950,6 +10951,8 @@ a.text-dark:focus {
  * Website: http://themes.3rdwavemedia.com/
  * Twitter: @3rdwave_themes
 */
+/*! adn some additional lines by nicesoul */
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -11402,6 +11405,21 @@ hr {
 
 .overview-section .item-icon .fa-angular {
     color: #CA3327
+}
+
+.overview-section .item-icon .fa-git-alt {
+    color: #f05f26
+}
+.overview-section .item-icon .fa-github {
+    color: #4e0f81
+}
+
+.overview-section .item-icon .fa-stripe {
+    color: #4260c2
+}
+
+.overview-section .item-icon .fa-database {
+    color: #4e4e4e
 }
 
 .overview-section .item-icon .fa-svelte {
