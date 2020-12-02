@@ -1,30 +1,42 @@
+/*! This CSS consist 3 parts - Bootstrap 4 CSS, a template author CSS (DevCard) and my usability and style fixing CSS (Nicesoul) */
+
+ /*! First some additional rules for Nicesoul */
+
+ /*! Normalize browsers section */
+ *:focus {outline: 1px dotted;}
+ /*! END of normalize rules  */
+
+*::selection {background-color: var(--gray); color: white;} /*! style fixing */
+header *::selection {background-color: white; color: var(--primary);} /*! standart selection colors are only for a standart white and blue styling */
+
+html {font-size: 18px;} /*! Make it readable, come on!  */
+:root {--green-hover: #398562;}
+a:focus { 
+    color: var(--green-hover); text-decoration: underline;
+    box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary); /*! make the hover and focus state visible */
+    outline: none;} /*! box-shadow above is a custom outline in fact */
+a.btn:hover { /*! This doesn't affect regural buttons (linksless)  */
+    text-decoration: underline} /*! without underline it's very hard to know if the state is changing. 
+    Because green and greenish can look the same for some people */
+header a:focus, header .profile-section a:hover { /*! make the hover and focus state visible */
+    box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
+    text-decoration: none}
+ p > a {font-weight: 600;} /*! readability */
+ /* .contact-icon-link {
+     display: inline-block;
+     height: 40px;
+     width: 100px;
+     background-color: red;
+ } */
+
+/*! END of my rules  */
+
 /*!
  * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
- /*! Some additional rules for Nicesoul  */
-
-*::selection {background-color: var(--gray); color: white;}
-header *::selection {background-color: white; color: var(--primary);}
-
-html {font-size: 18px;}
-a:focus {
-    color: #398562;
-    text-decoration: underline;
-    box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary);
-    outline: none;
-}
-header a:focus, header .profile-section a:hover {
-    box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
-    text-decoration: none
-}
- p > a {font-weight: 600;}
-
-/*! END of my rules  */
-
 
 :root {
     --blue: #007bff;
@@ -195,7 +207,7 @@ a {
 }
 
 a:hover {
-    color: #398562;
+    color: var(--green-hover);
     text-decoration: underline;
     }
 
@@ -3321,7 +3333,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:hover {
-    color: #398562;
+    color: var(--green-hover);
     text-decoration: underline
 }
 
@@ -5270,7 +5282,7 @@ input.btn-block[type="button"] {
 
 .page-link:hover {
     z-index: 2;
-    color: #398562;
+    color: var(--green-hover);
     text-decoration: none;
     background-color: #b5b5b5;
     border-color: #a9a9a9
@@ -10733,7 +10745,7 @@ button.bg-dark:focus {
 
 a.text-primary:hover,
 a.text-primary:focus {
-    color: #398562 !important
+    color: var(--green-hover) !important
 }
 
 .text-secondary {
@@ -10951,7 +10963,7 @@ a.text-dark:focus {
  * Website: http://themes.3rdwavemedia.com/
  * Twitter: @3rdwave_themes
 */
-/*! adn some additional lines by nicesoul */
+/*! and some additional lines by nicesoul */
 
 body {
     -webkit-font-smoothing: antialiased;
@@ -11214,7 +11226,7 @@ hr {
     padding-top: 5px;
     display: inline-block;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 10%; /* from 50 to 10% */
     transition: all 0.4s ease-in-out;
     background-color: #fff
 }
