@@ -21,13 +21,7 @@ a.btn:hover { /*! This doesn't affect regural buttons (linksless)  */
 header a:focus, header .profile-section a:hover { /*! make the hover and focus state visible */
     box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
     text-decoration: none}
- p > a {font-weight: 600;} /*! readability */
- /* .contact-icon-link {
-     display: inline-block;
-     height: 40px;
-     width: 100px;
-     background-color: red;
- } */
+ p > a, li > a {font-weight: 600;} /*! readability */
 
 /*! END of my rules  */
 
