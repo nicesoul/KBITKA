@@ -17,9 +17,6 @@
 	<!-- FontAwesome JS -->
     <script defer src="assets/fontawesome/js/all.js"></script>
     
-    <!-- Plugin CSS -->
-    <!-- <link rel="stylesheet" href="assets/plugins/tiny-slider/tiny-slider.css"> -->
-
 	<!-- Theme CSS -->  
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
 
@@ -41,66 +38,38 @@
 					<div class="profile-section pt-3 pt-lg-0">
 						<img class="profile-image mb-3 mx-auto" src="assets/images/profile.jpg" alt="image" >			
 						
-						<div class="bio mb-3">Enjoy! <br> My name is Vadym Sanzhara and I'm a fresh web developer. Welcome to my personal website!</div><!--//bio-->
+						<div class="bio mb-3" tabindex="0">Enjoy! <br> My name is Vadym Sanzhara and I'm a fresh web developer. Welcome to my personal website!</div><!--//bio-->
 						<ul class="social-list list-inline py-2 mx-auto">
 							<!-- <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li> -->
-							<li class="list-inline-item"><a href="https://github.com/nicesoul"><i class="fab fa-github-alt fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="https://linkedin.com/in/vadym-sanzhara/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="mailto:vadym.sanzhara@gmail.com"><i class="fas fa-envelope fa-fw"></i></a></li>
-							<li class="list-inline-item"><a href="https://t.me/truenicesoul"><i class="fab fa-telegram-plane fa-fw"></i></a></li>
-							
-							<!-- <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li> -->
-							<!-- <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li> -->
-						</ul><!--//social-list-->
+							<li class="list-inline-item"><a href="https://github.com/nicesoul" aria-labelledby="github"><i class="fab fa-github-alt fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://linkedin.com/in/vadym-sanzhara/" aria-labelledby="linkedin"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="mailto:vadym.sanzhara@gmail.com" aria-labelledby="email"><i class="fas fa-envelope fa-fw"></i></a></li>
+							<li class="list-inline-item"><a href="https://t.me/truenicesoul" aria-labelledby="telegram"><i class="fab fa-telegram-plane fa-fw"></i></a></li>
+							</ul><!--//social-list-->
 						<hr> 
 					</div><!--//profile-section-->
 					
 					<ul class="navbar-nav flex-column text-left">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+							<a class="nav-link" href="index.html#index-start"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="portfolio.html"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
+							<a class="nav-link" href="portfolio.html#portfolio-start"><i class="fas fa-laptop-code fa-fw mr-2"></i>Portfolio</a>
 						</li>
 						<!-- <li class="nav-item">
 							<a class="nav-link" href="services.html"><i class="fas fa-briefcase fa-fw mr-2"></i>Services &amp; Pricing</a>
 						</li> -->
 						<li class="nav-item active">
-							<a class="nav-link" href="resume.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Resume<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="resume.html#resume-start"><i class="fas fa-file-alt fa-fw mr-2"></i>Resume<span class="sr-only">(current)</span></a>
 						</li>
 						<!-- <li class="nav-item">
 							<a class="nav-link" href="blog-home.html"><i class="fas fa-blog fa-fw mr-2"></i>Blog</a>
 						</li> -->
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html"><i class="far fa-address-card mr-2"></i>Contact</a>
+							<a class="nav-link" href="contact.html#contact-start"><i class="far fa-address-card mr-2"></i>Contact</a>
 						</li>
-						<!-- <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-cogs fa-fw mr-2"></i>More Pages
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="project.html">Project Page</a>
-								<a class="dropdown-item" href="blog-home.html">Blog Home 1</a>
-								<a class="dropdown-item" href="blog-home-alt.html">Blog Home 2</a>
-								<a class="dropdown-item" href="blog-post.html">Blog Post</a>
-							</div>
-						</li> -->
 					</ul>
 					
-					<!-- <div class="my-2">
-						<a class="btn btn-primary" href="contact.html" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Hire Me</a>
-					</div> -->
-					
-	
-					<!-- <div class="dark-mode-toggle text-center w-100">
-						<hr class="mb-4">
-					    <h4 class="toggle-name mb-3 "><i class="fas fa-adjust mr-1"></i>Dark Mode</h4>
-					    
-					    <input class="toggle" id="darkmode" type="checkbox">
-					    <label class="toggle-btn mx-auto mb-0" for="darkmode"></label>
-					    
-					</div> -->
-					<!--//dark-mode-toggle-->
 				</div>
 			</nav>
 		</div><!--//force-overflow-->
@@ -109,7 +78,7 @@
 	<div class="main-wrapper">
 		<section class="cta-section theme-bg-light py-5">
 			<div class="container text-center single-col-max-width">
-				<h2 class="heading mb-3">Online Resume</h2>
+				<h2 class="heading mb-3" id="resume-start">Online Resume</h2>
 				<a class="btn btn-primary mb-2" href="assets/CV_NED_Vadym_Sanzhara_08.2020.pdf" target="_blank"><i class="fas fa-file-pdf mr-2"></i>
 					<span class="d-none d-sm-inline">Download </span>Dutch pdf <span class="d-none d-md-inline">version</span></a>
 				<a class="btn btn-primary mb-2" href="assets/CV_Vadym_Sanzhara_2020.pdf" target="_blank"><i class="fas fa-file-pdf mr-2"></i>
@@ -124,26 +93,22 @@
 				[this is yet to be filled]
 			</p>
 		</div>
-				
-				<!-- <div class="intro"></div> -->
-
-				</section>
+		</section>
 					
 				
 				<footer class="footer text-center py-4"> <p style="font-weight: 600;">Goodness always prevail</p>
+					<p class="visually-hidden"><span id="github">github</span><span id="linkedin">linkedin</span><span id="email">email</span><span id="telegram">telegram</span></p>
 				</footer>
 				
-			</div><!--//main-wrapper-->
+				
+	</div><!--//main-wrapper-->
+			
 
 			<!-- Javascript -->          
 			<script src="assets/plugins/jquery-3.4.1.min.js"></script>
 			<script src="assets/plugins/popper.min.js"></script> 
 			<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 			
-			<!-- Dark Mode -->
-			<!-- <script src="assets/plugins/js-cookie.min.js"></script> -->
-			<!-- <script src="assets/js/dark-mode.js"></script> -->
-
 		</body>
 		</html> 
 

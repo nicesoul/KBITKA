@@ -1,7 +1,8 @@
 /*! This CSS consist 3 parts - Bootstrap 4 CSS, a template author CSS (DevCard) and my usability and style fixing CSS (Nicesoul) */
 
  /*! First some additional rules for Nicesoul */
-
+	
+ .visually-hidden {position: absolute;width: 1px;height: 1px;overflow: hidden;clip: rect(0 0 0 0); user-select: none;} /*! Support clas to hide elements  */
  /*! Normalize browsers section */
  *:focus {outline: 1px dotted;}
  /*! END of normalize rules  */
@@ -21,8 +22,7 @@ a.btn:hover { /*! This doesn't affect regural buttons (linksless)  */
 header a:focus, header .profile-section a:hover { /*! make the hover and focus state visible */
     box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
     text-decoration: none}
- p > a, li > a {font-weight: 600;} /*! readability */
-
+p > a, li > a {font-weight: 600;} /*! readability */
 /*! END of my rules  */
 
 /*!
