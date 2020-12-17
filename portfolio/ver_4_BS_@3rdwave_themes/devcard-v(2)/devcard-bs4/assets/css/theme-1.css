@@ -4614,8 +4614,8 @@ input.btn-block[type="button"] {
 
 .navbar-toggler-icon {
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.5rem; /*! NOT changed not to collapse with a <h1>  */
+    height: 1.5rem;
     vertical-align: middle;
     content: "";
     background: no-repeat center center;
