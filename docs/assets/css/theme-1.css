@@ -7,6 +7,11 @@
  *:focus {outline: 1px dotted;}
  /*! END of normalize rules  */
 
+/*! TEST SECTION  */
+
+/*! END of the test section  */
+
+
 *::selection {background-color: var(--gray); color: white;} /*! style fixing */
 header *::selection {background-color: white; color: var(--primary);} /*! standart selection colors are only for a standart white and blue styling */
 
@@ -20,9 +25,15 @@ a.btn:hover { /*! This doesn't affect regural buttons (linksless)  */
     text-decoration: underline} /*! without underline it's very hard to know if the state is changing. 
     Because green and greenish can look the same for some people */
 header a:focus, header .profile-section a:hover { /*! make the hover and focus state visible */
-    box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
-    text-decoration: none}
+    box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white; text-decoration: none}
 p > a, li > a {font-weight: 600;} /*! readability */
+
+@media (min-width:992px) {.profile-image-desktop--hide {display:none}}
+@media (max-width:991px) {.profile-image-mobile--hide {display:none}
+    header {position: sticky !important; z-index: 100;}
+    .navbar-nav.flex-column {flex-direction: row !important;gap: 20px; justify-content: center; flex-wrap: wrap;}
+    .navbar-expand-lg > button {width: 100%;display: flex;justify-content: space-between;}  
+}
 /*! END of my rules  */
 
 /*!
@@ -4622,11 +4633,14 @@ input.btn-block[type="button"] {
     background-size: 100% 100%
 }
 /*! I need more time programming this project to avoid this stupid fixing coding */
-@media (max-width: 320px) { /*! mini temporary quick-fix not to collapse with a <h1> on iPhoneSE/iPhone5 */
+/*! mini temporary quick-fix not to collapse with a <h1> on iPhoneSE/iPhone5 */
+/* @media (max-width: 320px) { 
     .navbar-toggler-icon {
         width:0.75rem;
     }
-}
+} */
+/*! Hooray! Now I have time to change HTML, so this fix is no longer needed.
+I will live it commented as a reminder to not make stupid fixes anymore  */
 
 @media (max-width: 575.98px) {
 
@@ -4960,7 +4974,7 @@ input.btn-block[type="button"] {
 
 .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.1)
+    /* border-color: rgba(255, 255, 255, 0.1) */
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -11141,7 +11155,7 @@ hr {
     -webkit-opacity: .8;
     -moz-opacity: .8;
     opacity: .8;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
     padding: .25rem .6rem
 }
 
@@ -12195,10 +12209,10 @@ a.resume-link:hover {
     }
 
     .header .blog-name {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 1.2rem
+        /* width: 100%; */
+        /* position: absolute; */
+        /* left: 0; */
+        /* top: 1.2rem */
     }
 
     .header .btn-primary {
