@@ -2,37 +2,45 @@
 
  /*! First some additional rules for Nicesoul */
 	
- .visually-hidden {position: absolute;width: 1px;height: 1px;overflow: hidden;clip: rect(0 0 0 0); user-select: none;} /*! Support clas to hide elements  */
+/*! Prefixed by https://autoprefixer.github.io * PostCSS: v7.0.29, * Autoprefixer: v9.7.6 * Browsers: last 4 version */
+
+/*! Support clas to hide elements  */
+.visually-hidden {position: absolute;width: 1px;height: 1px;overflow: hidden;clip: rect(0 0 0 0);
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
  /*! Normalize browsers section */
  *:focus {outline: 1px dotted;}
  /*! END of normalize rules  */
 
 /*! TEST SECTION  */
-
 /*! END of the test section  */
 
-
-*::selection {background-color: var(--gray); color: white;} /*! style fixing */
-header *::selection {background-color: white; color: var(--primary);} /*! standart selection colors are only for a standart white and blue styling */
+*::selection, *::-moz-selection {background-color: var(--gray); color: white;} /*! style fixing */
+header *::selection, header *::-moz-selection {
+    background-color: white; color: var(--primary);} /*! standart selection colors are only for a standart white and blue styling */
 
 html {font-size: 18px;} /*! Make it readable, come on!  */
 :root {--green-hover: #398562;}
+
 a:focus { 
     color: var(--green-hover); text-decoration: underline;
-    box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary); /*! make the hover and focus state visible */
-    outline: none;} /*! box-shadow above is a custom outline in fact */
+    -webkit-box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary);
+            box-shadow:   0 0 0 2px white, 0 0 0 4px var(--primary); /*! make the hover and focus state visible */
+            outline: none;} /*! box-shadow above is a custom outline in fact */
 a.btn:hover { /*! This doesn't affect regural buttons (linksless)  */
     text-decoration: underline} /*! without underline it's very hard to know if the state is changing. 
     Because green and greenish can look the same for some people */
 header a:focus, header .profile-section a:hover { /*! make the hover and focus state visible */
-    box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white; text-decoration: none}
+    -webkit-box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white;
+            box-shadow:  0 0 0 4px var(--primary), 0 0 0 6px white; text-decoration: none}
+.skip_to_main_content {position: absolute; top: 0; left: 0px; z-index: 2; opacity: 0;}
+.skip_to_main_content:focus {opacity: 1; background-color: var(--dark); color: white; text-decoration: none;}
 p > a, li > a {font-weight: 600;} /*! readability */
 
 @media (min-width:992px) {.profile-image-desktop--hide {display:none}}
 @media (max-width:991px) {.profile-image-mobile--hide {display:none}
-    header {position: sticky !important; z-index: 100;}
-    .navbar-nav.flex-column {flex-direction: row !important;gap: 20px; justify-content: center; flex-wrap: wrap;}
-    .navbar-expand-lg > button {width: 100%;display: flex;justify-content: space-between;}  
+    header {position: -webkit-sticky !important;position: sticky !important; z-index: 100;}
+    .navbar-nav.flex-column {-webkit-box-orient: horizontal !important;-webkit-box-direction: normal !important;-ms-flex-direction: row !important;flex-direction: row !important;gap: 20px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+    .navbar-expand-lg > button {width: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}  
 }
 /*! END of my rules  */
 
@@ -11785,7 +11793,8 @@ hr {
     border-style: solid;
     border-width: 40px 40px 0 0;
     border-color: #54B689 transparent transparent transparent;
-    -webkit-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .client-quote .source-profile img {
