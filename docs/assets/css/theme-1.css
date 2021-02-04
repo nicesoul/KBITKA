@@ -19,6 +19,7 @@ header *::selection, header *::-moz-selection {
     background-color: white; color: var(--primary);} /*! standart selection colors are only for a standart white and blue styling */
 
 html {font-size: 18px;} /*! Make it readable, come on!  */
+/*! p {line-height: 1.4} */ /*! Check this later, please  */
 :root {--green-hover: #398562;}
 
 a:focus { 
