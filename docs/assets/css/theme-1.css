@@ -12,6 +12,13 @@
  /*! END of normalize rules  */
 
 /*! TEST SECTION  */
+/* :root{--animate-duration:12s;--animate-delay:20s;--animate-repeat:infinite;}
+.animate__animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--animate-duration);animation-duration:var(--animate-duration);-webkit-animation-fill-mode:both;animation-fill-mode:both;
+  -webkit-animation-iteration-count:var(--animate-repeat);animation-iteration-count:var(--animate-repeat);
+  -webkit-animation-delay:var(--animate-delay);animation-delay:var(--animate-delay);}
+@-webkit-keyframes flash{0%,2%,6%,to{opacity:1}4%{opacity:0}}
+@keyframes flash{0%,2%,8%,to{opacity:1}4%,6%{opacity:0}}
+.animate__flash{-webkit-animation-name:flash;animation-name:flash} */
 /*! END of the test section  */
 
 *::selection, *::-moz-selection {background-color: var(--gray); color: white;} /*! style fixing */
@@ -40,8 +47,16 @@ p > a, li > a {font-weight: 600;} /*! readability */
 @media (min-width:992px) {.profile-image-desktop--hide {display:none}}
 @media (max-width:991px) {.profile-image-mobile--hide {display:none}
     header {position: -webkit-sticky !important;position: sticky !important; z-index: 100;}
-    .navbar-nav.flex-column {-webkit-box-orient: horizontal !important;-webkit-box-direction: normal !important;-ms-flex-direction: row !important;flex-direction: row !important;gap: 20px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+    .navbar-nav.flex-column {-webkit-box-orient: horizontal !important;-webkit-box-direction: normal !important;-ms-flex-direction: row !important;flex-direction: row !important;
+      /* gap: 20px;  */
+      -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap;}
     .navbar-expand-lg > button {width: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}  
+}
+header .nav-item + .nav-item {
+  margin-left: 10px;
+  /* background-color: blue;  */
+  /* padding:0 10px; */
+
 }
 /*! END of my rules  */
 
@@ -4935,9 +4950,9 @@ I will live it commented as a reminder to not make stupid fixes anymore  */
     border-color: rgba(0, 0, 0, 0.1)
 }
 
-.navbar-light .navbar-toggler-icon {
+/* .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-}
+} */
 
 .navbar-light .navbar-text {
     color: rgba(0, 0, 0, 0.5)
@@ -4986,9 +5001,9 @@ I will live it commented as a reminder to not make stupid fixes anymore  */
     /* border-color: rgba(255, 255, 255, 0.1) */
 }
 
-.navbar-dark .navbar-toggler-icon {
+/* .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
-}
+} */
 
 .navbar-dark .navbar-text {
     color: rgba(255, 255, 255, 0.5)
@@ -11175,6 +11190,7 @@ hr {
 }
 
 .header .navbar-dark .navbar-toggler-icon {
+    /* background-image: url(/docs/assets/images/icons/Selected.Nicesoul/arrow-down.svg); */
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
 }
 
